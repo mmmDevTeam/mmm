@@ -3,13 +3,176 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-Width,user-scalable=no,initial-scale=1.0"/>
+	<title>mmbuy-client</title>
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/base.css">
 	<link rel="stylesheet" type="text/css" href="./less/index.css">
-	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
-	<title>慢慢买手机客户端</title>
+	<link rel="stylesheet" sty;e="text/css" href="./less/units.css">
+	
 </head>
 <body>
-	
+	<!-- 头部开始 -->
+	<header>
+		<div class="header-top" id="headAnchor">
+			<div class="row">
+				<div class="col-xs-8 logo">
+					<img src="./images/header_logo.png">
+				</div>
+				<div class="col-xs-offset-1 col-xs-3 download">
+					<a href="#"><img src="./images/header_app.png"></a>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<input class="header-search-input" type="text" placeholder="请输入你想比价的商品">
+			<a href="#" class="header-search-button">搜索</a>
+		</div>
+	</header>
+	<!-- 头部结束 -->
+
+	<!-- 导航列表开始 -->
+	<nav>
+		<div class="container">
+			<div class="row" id="navWrapper">
+				<!-- 1 -->
+				<!-- 模板 -->
+				<script type="text/html" id="navItem">
+					{{each result}}
+						<div class="col-xs-3 search-item">
+							<a href="{{$value.titlehref}}">
+						      {{#$value.img}}
+						      <p>{{$value.name}}<p>
+						    </a>
+						</div>
+					{{/each}}
+
+				</script>
+				<!-- <div class="col-xs-3 search-item">
+					<a href="#">
+				      <img class="search-item-img" src="./images/ic_search.png" alt="比价搜索">
+				      <p>比价搜索<p>
+				    </a>
+				</div>-->
+					
+			</div>
+		</div>
+	</nav>
+	<!-- 导航列表结束 -->
+
+	<!-- 产品列表开始 -->
+	<section class="main">
+		<div class="main-top-bar unit-toolbar clearfix">
+			<span class="fl">超值折扣推荐</span>
+			<a href="#" class="glyphicon glyphicon-thumbs-up fr" aria-hidden="true"></a>
+		</div>
+		<div class="main-list clearfix">
+			<!-- 产品模板 -->
+			<script type="text/html" id="productTemplate">
+				{{each result}}
+				<a href="d.aspx?id={{$value.productId}}&f=weixinlist">
+					<div class="media">
+					  <div class="media-left">
+					      {{#$value.productImgSm}}
+					  </div>
+					  <div class="media-body">
+						  <p class="main-list-product">
+						  	<span class="product-name">{{$value.productName}}</span>
+						  	<span class="product-price">{{$value.productPinkage}}</span>
+						  </p>
+						  <p class="source-info clearfix">
+						  	<span class="product-saler fl">{{$value.productFrom}}</span>
+						  	<span class="product-time fl">{{$value.productTime}}</span>
+						  	<span class="product-number fr">{{$value.productComCount | getNumber}}</span>
+						  </p>
+					  </div>
+					</div>
+				</a>
+				{{/each}}
+			</script>
+			<!-- <div class="media">
+			  <div class="media-left">
+			    <a href="#">
+			      <img class="media-object" src="./images/product.png" alt="产品">
+			    </a>
+			  </div>
+			  <div class="media-body">
+				  <p class="main-list-product">
+				  	<span class="product-name">小美 家用实木落地衣帽架</span>
+				  	<span class="product-price">68元（券后）</span>
+				  </p>
+				  <p class="source-info clearfix">
+				  	<span class="product-saler fl">天猫商城</span>
+				  	<span class="product-time fl">03-15 17:00</span>
+				  	<span class="product-number fr">1</span>
+				  </p>
+			  </div>
+			</div> -->
+		</div>
+		<div class="main-bottom">
+			<div class="main-bottom-more">
+				<a href="moneyctrl.html" class="main-bottom-more-btn">更多优惠信息>></a>
+			</div>
+			<div class="main-bottom-ranking unit-toolbar">
+				<span class="fl">品牌推荐</span>
+				<a href="sitenav.html" class="glyphicon glyphicon-arrow-right fr" aria-hidden="true"></a>
+			</div>
+		</div>
+	</section>
+	<!-- 产品列表开始 -->
+
+	<!-- 底部开始 -->
+	<footer>
+		<div class="footer-buttons clearfix">
+			<a href="login.html" class="col-xs-6 footer-login">登录</a>
+			<a href="register.html" class="col-xs-6 footer-register">注册</a>
+			<a href="#headAnchor" class="footer-backToTop">
+				<span class="glyphicon glyphicon-arrow-up"></span>
+				<span>返回顶部</span>
+			</a>
+		</div>
+		<div class="footer-info">
+			<div class="foot-info-wrapper">
+				<a href="#" class="footer-download"></a>
+				<span>慢慢买手机版--掌上比价平台</span>
+			</div>
+			<span>m.manmanbuy.com</span>
+		</div>
+	</footer>
+	<!-- 底部结束 -->
 </body>
-<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src = "./lib/zepto/zepto.min.js"></script>
+<script src = "./lib/jquery/jquery.min.js"></script>
+<script src = "./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src = "./lib/artTemplate/template-debug.js"></script>
+<script src = "./js/index.js"></script>
+<script src = "./js/utility.js"></script>
+<script>
+	//获取首页导航栏数据
+	$(function(){
+		utilities.getAjax({
+			url:"http://192.168.15.106:3000/api/getindexmenu",
+			method:"GET",
+			data:"",
+			dataType:"json",
+			callback:showNavItems
+		});
+		utilities.getAjax({
+			url:"http://192.168.15.106:3000/api/getmoneyctrl",
+			method:"GET",
+			data:"",
+			dataType:"json",
+			callback:showProducts
+		});
+	});
+	var showNavItems = function(data){
+		var html = template('navItem',data);
+		$('#navWrapper').html(html);
+	}
+	//获取产品列表
+	var showProducts = function(data){
+		template.helper('getNumber',utilities.getNumber);
+		var html = template('productTemplate',data);
+		$('.main-list').html(html);
+	}
+</script>
 </html>

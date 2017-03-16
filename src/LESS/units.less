@@ -1,0 +1,23 @@
+// 橙底白字，左标题，右链接
+@mainTopBarBorderBottom: .01rem solid #FFC881;
+@mainTopBarFontSize: .18rem;
+@mainTopBarBorderTop: .04rem solid #F7F7F7;
+@toolBarBgC: #FF841D;
+@toolBarHeight: .55rem;
+@toolBarPadding: 0 .1rem;
+@white:#fff;
+.unit-toolbar{
+	padding:@toolBarPadding;
+	background-color: @toolBarBgC;
+	border-top:@mainTopBarBorderTop;
+	border-bottom:@mainTopBarBorderBottom;
+	height:@toolBarHeight;
+	overflow:hidden;
+	
+	span,
+	a{
+		font-size: @mainTopBarFontSize;
+		line-height: @toolBarHeight;
+		color:@white;
+	}
+}
