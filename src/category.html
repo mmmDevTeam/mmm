@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-Width,user-scalable=no,initial-scale=1.0"/>
+	<title>慢慢买手机版</title>
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" type="text/css" href="./less/headerFooter.css">
+	<link rel="stylesheet" stye="text/css" href="./less/units.css">
+	<link rel="stylesheet" type="text/css" href="./less/category.css">
+</head>
+<body>
+	<!-- 头部开始 -->
+	<header>
+		
+	</header>
+	<!-- 头部结束 -->
+	<!-- 分类搜索开始 -->
+	<div class="category-list" id="titleWrapper">
+		<!-- 产品大类标题模板 -->
+		<script type="text/html" id="category-title-template">
+			{{each result}}
+			<div class="category-title container">
+				<div class="category-title-top clearfix" titleId="{{$value.titleId}}">
+					<span class="fl">{{$value.title}}</span>
+					<i class="glyphicon glyphicon-menu-down fr"></i>
+				</div>
+				<div class="row category-wrapper container" id="categoryWrapper{{$value.titleId}}">
+				</div>
+			</div>
+			{{/each}}
+		</script>
+		
+	</div>
+	<!-- 分类搜索结束 -->
+	<!-- 底部开始 -->
+	<footer>
+		
+	</footer>
+	<!-- 底部结束 -->
+</body>
+<!-- 子类列表模板 -->
+<!-- 传入的参数有当前页面和分类id，当前页面可以在prolist中用于回退 -->
+<script type="text/html" id="categoriesTemplate">
+	{{each result}}
+		<a href="prolist.html?bk=category&bkn=全部分类&id={{$value.titleId}}" class="col-xs-4">{{$value.category}}</a>
+	{{/each}}
+</script>
+<script src = "./lib/zepto/zepto.min.js"></script>
+<script src = "./lib/jquery/jquery.min.js"></script>
+<script src = "./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src = "./lib/artTemplate/template-debug.js"></script>
+<script src = "./js/utility.js"></script>
+<script src = "./js/category.js"></script>
+</html>

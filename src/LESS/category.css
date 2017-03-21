@@ -1,0 +1,23 @@
+.category-list .category-title .category-title-top {
+  padding: 0 0.1rem;
+  background-color: #EBEBEB;
+  cursor: pointer;
+}
+.category-list .category-title .category-title-top span,
+.category-list .category-title .category-title-top i {
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.category-list .category-title .category-wrapper {
+  display: none;
+}
+.category-list .category-title .category-wrapper a {
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+.category-list .category-title:first-of-type .category-title-top {
+  border-radius: 0.1rem 0.1rem 0 0;
+}

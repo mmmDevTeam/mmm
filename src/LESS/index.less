@@ -1,52 +1,35 @@
-@charset "utf-8";
-@scaleRate: .833333;
-@white:#fff;
-@mid:middle;
-@cen:center;
-@baseBgc: @white;
-@baseColor: #5A5A5A;
-@fullWidth: 100%;
-@headerTopBgC: #FF841D;
-@headerTopHeight: .5rem;
-@headerTopImgHeight: .25rem;
-@headerTopImgWidth: 1.85rem;
-@headerTopDownloadMR:.1rem;
-@mainTopBarBorderTop: .04rem solid #F7F7F7;
-@headerBottomBorder: 1px solid #F1F1F1;
-@headerSearchInputBgC: #F1F1F1;
-@headerSearchInputWidth: 85%;
-@headerSearchInputHeight: .2rem;
-@headerSearchInputML: .1rem;
-@headerSearchInputPL: .1rem;
-@headerSearchButtonML: -.2rem;
-@headerSearchButtonWidth: .5rem;
-@headerSearchButtonHeight: .3rem;
-@headerSearchButtonRadius: .15rem;
-@mainBoxPadding: .22rem 0;
-@mainMarginBottom: .1rem;
-@mainBoxSearchItemWidth:.6rem;
+@charset 					"utf-8";
+@scaleRate: 				.833333;
+@white:						#fff;
+@mid:						middle;
+@cen:						center;
+@baseBgc: 					@white;
+@baseColor: 				#F7F7F7;
+@fullWidth: 				100%;
+@BgC: 						#FF841D;
+@mainBoxPadding: 			.22rem 0;
+@mainMarginBottom: 			.1rem;
+@mainBoxSearchItemWidth:	.6rem;
 @mainBoxSearchItemImgWidth: .5rem;
-@mainBoxSearchItemImgMB: .05rem;
-@mainBoxSearchItemPFontSize: .12rem;
-@mainBoxSearchItemMB: .18rem;
-@mainListImgWidth: 1rem;
-@mainListMediaPadding: .14rem .1rem;
-@mainListProductNameColor: #333;
+@mainBoxSearchItemImgMB: 	.05rem;
+@mainBoxSearchItemPFontSize:.12rem;
+@mainBoxSearchItemMB: 		.18rem;
+@mainListImgWidth: 			1rem;
+@mainListMediaPadding: 		.14rem .1rem;
+@mainListProductNameColor: 	#333;
 @mainListProductPriceColor: #FF6C00;
-@mainListSourceInfoColor: #AFAFAF;
-@mainListSourceInfoBottom: .2rem;
-@mainListProductSalerPL: .04rem;
-@mainListProductSalerBR: 1px solid @mainListSourceInfoColor;
-@mainBottomHeight: 1.08rem;
-@mainBottomMoreBtnWidth: 3.38rem;
-@mainBottomMoreBtnHeight: .3rem;
-@mainBottomMoreBtnMargin: 0 auto .2rem;
-@mainBottomBgC: #F7F7F7;
-@mainBottomPadding:.1rem 0 0 0;
-@mainBottomBtnHeight: .34rem;
-@footerButtonsBorderTop: .02rem solid #F1F1F1;
-@footerDownloadColor: #F00;
-@footerWrapperMT: .17rem;
+@mainListSourceInfoColor: 	#AFAFAF;
+@mainListSourceInfoBottom: 	.2rem;
+@mainListProductSalerPL: 	.04rem;
+@mainListProductSalerBR: 	1px solid @mainListSourceInfoColor;
+@mainBottomHeight: 			1.08rem;
+@mainBottomMoreBtnWidth: 	3.38rem;
+@mainBottomMoreBtnHeight: 	.3rem;
+@mainBottomMoreBtnMargin: 	0 auto .2rem;
+@mainBottomBgC: 			@baseColor;
+@mainBottomPadding:			.1rem 0 0 0;
+@mainBottomBtnHeight: 		.34rem;
+
 html {
 	// -webkit-transform: scale(@scaleRate);
 	color:@baseColor;
@@ -58,58 +41,7 @@ html {
 		width:@fullWidth;
 	}
 }
-header {
-	.header-top {
-		background-color: @headerTopBgC;
-		.logo{
-			display: table-cell;
-			vertical-align: @mid;
-			height: @headerTopHeight;
-			// font-size:@headerTopHeight*@scaleRate;
-			line-height: @headerTopHeight;
-			text-align: center;
-			img{
-				height: @headerTopImgHeight;
-				width: @headerTopImgWidth;
-				vertical-align: @mid;
-			}
-		}
-		.download {
-			text-align: right;
-			line-height: @headerTopHeight;
-			a img{
-				width: @headerTopHeight*@scaleRate;
-				height: @headerTopHeight*@scaleRate;
-				margin-right: @headerTopDownloadMR;
-			}
-		}
-	}
-	.header-bottom {
-		line-height: @headerTopHeight;
-		border:@headerBottomBorder;
-		.header-search-input,
-		.header-search-button {
-			display:inline-block;
-			vertical-align:@mid;
-			height:@headerSearchButtonHeight;
-			line-height: @headerSearchButtonHeight;
-			border-radius: @headerSearchButtonRadius;
-		}
-		.header-search-input {
-			margin-left:@headerSearchInputML ;
-			background-color: @headerSearchInputBgC;
-			width: @headerSearchInputWidth;
-			padding-left: @headerSearchInputPL;
-		}
-		.header-search-button {
-			margin-left:@headerSearchButtonML;
-			text-align: center;
-			background-color: @headerTopBgC;
-			width: @headerSearchButtonWidth;
-			color:@white;
-		}
-	}
-}
+
 nav{
 	padding:@mainBoxPadding;
 
@@ -189,34 +121,4 @@ nav{
 		
 	}
 
-}
-footer {
-	position:relative;
-	.footer-buttons {
-		border-top:@footerButtonsBorderTop;
-		a{
-			text-align: @cen;
-			height: @mainBottomBtnHeight;
-			line-height: @mainBottomBtnHeight;
-			float: left;
-			width:30%;
-			border-right: @headerBottomBorder;
-			border-bottom: @headerBottomBorder;
-		}
-		a:last-of-type {
-			width:29%;
-			border-right:none;
-		}
-	}
-	.footer-info{
-		text-align: @cen;
-		margin-bottom: 20px;
-		.foot-info-wrapper{
-			margin-top: @footerWrapperMT;
-			a{
-				color: @footerDownloadColor;
-			}
-		}
-		
-	}
 }

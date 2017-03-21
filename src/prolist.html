@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>慢慢买·全网比价、折扣</title>
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" stye="text/css" href="./less/headerFooter.css">
+	<link rel="stylesheet" stye="text/css" href="./less/units.css">
+	<link rel="stylesheet" type="text/css" href="./less/prolist.css">
+</head>
+<body>
+	<!-- 头部开始 -->
+	<header>
+		
+	</header>
+	<section class="main">
+		<!-- 产品分类开始 -->
+		<div class="categories" id="categoriesWrapper">
+			<!-- 筛选模板 -->
+			<script type="text/html" id="categories-template">
+				<div class="category-level">
+					<a href="index.html">首页</a>
+					<span class="glyphicon glyphicon-menu-right"></span>
+					<a href="{{bk}}.html">{{bkn}}</a>
+					<span class="glyphicon glyphicon-menu-right"></span>
+					<span>{{name}}</span>
+				</div>
+			</script>
+			
+			<div class="category-filter">
+				
+			</div>
+		</div>
+		<!-- 产品分类结束 -->
+		<!-- 产品列表开始 -->
+		<div class="proList" id="prolistWrapper">
+			<!-- 产品模板index-product-template -->
+			<script type="text/html" id="prolist-product-template">
+				{{each result}}
+				<div class="media productWrapper">
+					<a href="productDetail.html?cid={{$value.categoryId}}&pid={{$value.productId}}" class="product-link"></a>
+				  <div class="media-left">
+				      {{#$value.productImg}}
+				  </div>
+				  <div class="media-body">
+					  <p class="main-list-product">
+					  	<span class="product-name">{{$value.productName}}</span>
+					  </p>
+					  <p class="product-price">{{$value.productPrice}}</p>
+					  <p class="source-info clearfix">
+					  	<span class="product-saler fl">{{$value.productQuote}}</span>
+					  	<span class="product-comment fr">{{$value.productCom}}</span>
+					  </p>
+				  </div>
+				</div>
+				{{/each}}
+			</script>
+		</div>
+	
+		<!-- 产品列表结束 -->
+		<div class="pro-pages container">
+			<div class="row">
+				<button class="col-xs-3 pro-btn-pre">上一页</button>
+				<select name="pageSelector" class="col-xs-offset-1 col-xs-3 pro-select" id="proSelector">
+				</select>
+				<button class="col-xs-3 col-xs-offset-1  pro-btn-next">下一页</button>
+			</div>
+		</div>
+	</section>
+	<!-- 底部开始 -->
+	<footer>
+		
+	</footer>
+	<!-- 底部结束 -->
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/artTemplate/template-debug.js"></script>
+<script src="./js/prolist.js"></script>
+<script src="./js/utility.js"></script>
+</html>

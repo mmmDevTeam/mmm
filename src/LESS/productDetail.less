@@ -1,0 +1,137 @@
+@categoryLevelSpanHeight: 	.4rem;
+@white: 					#fff;
+@categoriesMT: 				1px solid #888;
+@titleFontSize: 			.2rem;
+@imtMarginTop:				.3rem;
+@color1:					#FFC529;
+@color2:					#FF9E20;
+@favBottom:					.4rem;
+@favRight: 					.4rem;
+@favWidth: 					.4rem;
+@favBgC:					#96D700;
+@operationBorder:			1px solid #C14D00;
+@operationHeight:			.34rem;
+@topZIndex:					100;
+@storeInfoImgWidth:			.16rem;
+@storeInfoLiHeight:			.44rem;
+@storeInfoMargin:			.25rem;
+@storeInfoBtnWidth:			.56rem;
+@storeInfoBtnHeight:		.24rem;
+@storeInfoBtnRight: 		.04rem;
+@storeInfoBtnRadius: 		.04rem;
+@storeInfoPriceMargin:		.18rem;
+@storeInfoPriceColor:		#f00;
+@storeLinkPL:				.3rem;
+@productNoticeHeight:       .4rem;
+@commentTitleHeight:		.34rem;
+@commentTitleBgC:			#DBDBDB;
+@comWrapperBgC: 			#F2F2F2;
+@comWrapperMB: 			  	.2rem;		
+@productComMoreWidth:		90%;
+@productComMoreHeight: 		.4rem;
+@productComMoreBorder: 		1px solid #BBB;
+@ComMoreBorderRadius: 		.05rem;
+@ComMoreBorderMB: 			.1rem;
+.main{
+	.categories{
+		border-top:@categoriesMT;
+		.category-level a,
+		.category-level span{
+			height:@categoryLevelSpanHeight;
+			line-height: @categoryLevelSpanHeight;
+		}
+	}
+	.product-detail{
+
+		.product-detail-content{
+			.product-name{
+				text-align: center;
+				font-size:@titleFontSize;
+			}
+			.imgWrapper{
+				width:100%;
+				position:relative;
+				.fav{
+					position:absolute;
+					width: @favWidth;
+					height: @favWidth;
+					border-radius: @favWidth/2;
+					bottom: @favBottom;
+					right: @favRight;
+					background-color: @favBgC;
+					color: @white;
+					text-align: center;
+					line-height: @favWidth;
+				}
+				img{
+					display:block;
+					margin:@imtMarginTop auto;
+				}
+			}
+			.product-operations {
+				a{
+					color: @white;
+					font-size: @titleFontSize;
+					line-height: @operationHeight;
+					text-align: center;
+					border: @operationBorder;
+					background-color: @color1;
+					height:@operationHeight;
+				}
+				.product-params{
+					background-color: @color2;
+				}
+			}
+		}
+		.product-stores{
+			position:relative;
+			td:nth-of-type(2) a{
+				position:absolute;
+				padding-left:@storeLinkPL;
+				left: 0;
+				width:100%;
+				z-index:@topZIndex;
+				top:0;
+			}
+			.red{
+				text-align: right;
+				color:@storeInfoPriceColor;
+			}
+		}
+		.fav{
+			position:absolute;
+		}
+		.product-notice{
+			height:@productNoticeHeight;
+			line-height: @productNoticeHeight;
+		}
+		.product-comments{
+			.comments-title{
+						text-align: center;
+						height: @commentTitleHeight;
+						line-height: @commentTitleHeight;
+						background-color: @commentTitleBgC;
+					}
+			.comment-detail{
+				background-color: @comWrapperBgC;
+				.com-wrapper{
+					margin-bottom: @comWrapperMB;
+					
+				}
+			}
+		}
+		.product-com-more{
+			a{
+				display: block;
+				width: @productComMoreWidth;
+				margin: 0 auto;
+				height: @productComMoreHeight;
+				line-height: @productComMoreHeight;
+				text-align: center;
+				border:@productComMoreBorder;
+				border-radius:@ComMoreBorderRadius;
+				margin-bottom: @ComMoreBorderMB;
+			}
+		}
+	}
+}

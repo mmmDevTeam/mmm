@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device,user-scalable=no,initial-scale=1.0">
+	<title>慢慢买·全网比价、折扣</title>
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" stye="text/css" href="./less/headerFooter.css">
+	<link rel="stylesheet" stye="text/css" href="./less/units.css">
+	<link rel="stylesheet" type="text/css" href="./less/productDetail.css">
+</head>
+<body>
+	<!-- 头部开始 -->
+	<header>
+		
+	</header>
+	<!-- 头部结束 -->
+	<!-- 商品数据开始 -->
+	<section class="main">
+		<!-- 产品分类开始 -->
+		<!-- 顶部开始 -->
+		<div class="categories" id="categoriesWrapper">
+			<!-- 筛选模板 -->
+			<script type="text/html" id="categories-template">
+				<div class="category-level">
+					<a href="index.html">首页</a>
+					<span class="glyphicon glyphicon-menu-right"></span>
+					<a href="prolist.html?id={{categoryId}}">{{bkn}}</a>
+					<span class="glyphicon glyphicon-menu-right"></span>
+					<span>{{name}}</span>
+				</div>
+			</script>
+			<div class="category-filter">
+				
+			</div>
+		</div>
+		<!-- 顶部结束 -->
+		<!-- 数据详情开始 -->
+		<div class="product-detail"  >
+			<div class="product-detail-content" id="detailWrapper">
+				<script type="text/html" id="DetailContentTemplate">
+					<p class="product-name">
+						{{productName}}
+					</p>
+					<div class="imgWrapper">
+						{{#productImg}}
+						<a href="javascript:;" class="fav">收藏</a>
+					</div>
+					
+					<div class="product-operations container-fluid">
+						<div class="row">
+							<a href="#storesStart" class="col-xs-4 product-buy">比价购买</a>
+							<a href="#" class="col-xs-4 product-params">产品参数</a>
+							<a href="#commentsStart" class="col-xs-4 product-comments-link">评价</a>
+						</div>
+					</div>
+				</script>
+			</div>
+			<!-- 店铺信息开始 -->
+			<div class="product-stores">
+				
+			</div>
+			<div class="product-notice">
+				*实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟
+			</div>
+			<!-- 店铺信息结束 -->
+			<!-- 评价信息开始 -->
+			<div class="product-comments" id="commentsStart">
+				<p class="comments-title">网友评价</p>
+				<div class="comment-detail" id="commentsWrapper">
+					<script type="text/html" id ="commentTemplate">
+					{{each result}}
+						<div class="com-wrapper">
+							<p class="comment-detail-top clearfix">
+								<span class="user-name fl">{{$value.comName}}</span>
+								<span class="comment-date fr">{{$value.comTime}}</span>
+							</p>
+							<p class="clearfix">
+								<span class="comment-from fr">{{$value.comFrom}}</span>
+							</p>
+							<p class="comment-content">{{$value.comContent}}</p>
+						</div>
+						
+					{{/each}}
+					</script>
+				</div>
+			</div>
+			<!-- 评价信息结束 -->
+			<div class="product-com-more">
+				<a href="#" class="com-more-link">查看更多评价</a>
+			</div>
+		</div>
+		<!-- 数据详情结束 -->
+		<!-- 产品分类结束 -->
+	</section>
+	<!-- 商品数据结束 -->
+	<!-- 尾部开始 -->
+	<footer>
+		
+	</footer>
+	<!-- 尾部结束 -->
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/artTemplate/template-debug.js"></script>
+<script src="./js/productDetail.js"></script>
+<script src="./js/utility.js"></script>
+</html>

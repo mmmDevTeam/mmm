@@ -1,0 +1,89 @@
+.main .categories {
+  border-top: 1px solid #888;
+}
+.main .categories .category-level a,
+.main .categories .category-level span {
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.main .product-detail .product-detail-content .product-name {
+  text-align: center;
+  font-size: 0.2rem;
+}
+.main .product-detail .product-detail-content .imgWrapper {
+  width: 100%;
+  position: relative;
+}
+.main .product-detail .product-detail-content .imgWrapper .fav {
+  position: absolute;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 0.2rem;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  background-color: #96D700;
+  color: #fff;
+  text-align: center;
+  line-height: 0.4rem;
+}
+.main .product-detail .product-detail-content .imgWrapper img {
+  display: block;
+  margin: 0.3rem auto;
+}
+.main .product-detail .product-detail-content .product-operations a {
+  color: #fff;
+  font-size: 0.2rem;
+  line-height: 0.34rem;
+  text-align: center;
+  border: 1px solid #C14D00;
+  background-color: #FFC529;
+  height: 0.34rem;
+}
+.main .product-detail .product-detail-content .product-operations .product-params {
+  background-color: #FF9E20;
+}
+.main .product-detail .product-stores {
+  position: relative;
+}
+.main .product-detail .product-stores td:nth-of-type(2) a {
+  position: absolute;
+  padding-left: 0.3rem;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+.main .product-detail .product-stores .red {
+  text-align: right;
+  color: #f00;
+}
+.main .product-detail .fav {
+  position: absolute;
+}
+.main .product-detail .product-notice {
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.main .product-detail .product-comments .comments-title {
+  text-align: center;
+  height: 0.34rem;
+  line-height: 0.34rem;
+  background-color: #DBDBDB;
+}
+.main .product-detail .product-comments .comment-detail {
+  background-color: #F2F2F2;
+}
+.main .product-detail .product-comments .comment-detail .com-wrapper {
+  margin-bottom: 0.2rem;
+}
+.main .product-detail .product-com-more a {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+  border: 1px solid #BBB;
+  border-radius: 0.05rem;
+  margin-bottom: 0.1rem;
+}

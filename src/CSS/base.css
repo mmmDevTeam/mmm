@@ -3,9 +3,8 @@
 
 /*css 初始化 start */
 html {
-  width: 100%;
   font-size: 100px;
-  font-family:"Microsoft Yahei" Arial, sans-serif;
+  font-family:"Microsoft Yahei", Arial, sans-serif;
 }
 body{
   // font-size:12px;
@@ -87,21 +86,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
 }
 
-/*废物利用*/
 s, i, em {
     font-style: normal;
     text-decoration: none;
 }
-
-
-
-/*公共类*/
-.w {
-    /*版心 提取 */
-    width: 1210px;
-    margin: 0 auto;
-}
-
 .fl {
     float: left;
 }

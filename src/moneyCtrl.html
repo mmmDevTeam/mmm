@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+	<title>慢慢买·全网比价、折扣</title>
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" stye="text/css" href="./less/headerFooter.css">
+	<link rel="stylesheet" stye="text/css" href="./less/units.css">
+	<link rel="stylesheet" type="text/css" href="./less/moneyCtrl.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<header class="sub-header">
+		
+	</header>
+	<section class="moneyctrl-main">
+		<!-- 产品列表开始 -->
+		<div class="moneyctrl-list" id="moneyctrlWrapper">
+			<!-- 产品模板product-template -->
+			<script type="text/html" id="moneyctrl-product-template">
+				{{each result}}
+				<div class="media productWrapper">
+					<a href="productDetail.html?cid={{$value.categoryId}}&pid={{$value.productId}}" class="product-link"></a>
+				  <div class="media-left">
+				      {{#$value.productImgSm}}
+				  </div>
+				  <div class="media-body">
+					  <p class="main-list-product">
+					  	<span class="product-name">{{$value.productName}}</span>
+					  </p>
+					  <p class="source-info clearfix">
+					  	<span class="product-saler fl">{{$value.productFrom}}</span>
+					  	<span class="product-time fl">{{$value.productTime}}</span>
+					  	<span class="product-number fr">{{$value.productComCount | getNumber}}</span>
+					  	<i class="glyphicon glyphicon-option-horizontal fr"></i>
+					  </p>
+				  </div>
+				</div>
+				{{/each}}
+			</script>
+		</div>
+		<!-- 产品列表结束 -->
+		<div class="moneyctrl-pages container">
+			<div class="row">
+				<button class="col-xs-3 col-xs-offset-1 moneyctrl-btn-pre">上一页</button>
+				<select name="pageSelector" class="col-xs-offset-1 col-xs-3 moneyctrl-select" id="moneyctrlSelector">
+				</select>
+				<button class="col-xs-3 col-xs-offset-1  moneyctrl-btn-next">下一页</button>
+			</div>
+		</div>
+	</section>
+	<!-- 尾部 -->
+	<footer>
+		
+	</footer>
+	
+</body>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/artTemplate/template-debug.js"></script>
+<script src="./js/utility.js"></script>
+<script src="./js/moneyCtrl.js"></script>
+
+<script>
+	$("#head").on("click",function(){
+
+	});
+	$("#footer").on("click",function(){
+
+	});
+</script>
+</html>
